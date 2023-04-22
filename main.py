@@ -5,13 +5,10 @@ from random import randint
 
 #   Funzione Main
 def main():
-    #   Visiona se lo script è stato avviato con i parametri giusti
     if len(sys.argv[1:]) == 1 and sys.argv[1].isdigit():
-        #   Controlla se ci sono 2 o più giocatori
         if int(sys.argv[1]) < 2:
             print("Non puoi avviare la partita se non si dispone di almeno 2 giocatori!")
         else:
-            #   Inizia la partita
             start_game(int(sys.argv[1]))
     else:
         print("Utilizza: python main.py <numero-giocatori>")
